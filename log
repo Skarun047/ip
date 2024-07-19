@@ -1,0 +1,13 @@
+clear all,close all,clc;
+i=imread("C:\Users\BME\Documents\MATLAB\IP_2024 - Copy\DIP3E_Original_Images_CH03\Fig0359(a)(headCT_Vandy).tif");
+subplot(1,2,1),imshow(i);
+[r,c]=size(i);
+i1=double(i);
+n=100;
+for x=1:r
+    for y=1:c
+        r=i1(x,y);
+        s(x,y)=n*log(1+r);
+    end
+end
+subplot(1,2,2),imshow(s)
