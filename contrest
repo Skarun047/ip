@@ -1,0 +1,22 @@
+clear all,close all,clc;
+I=imread("C:\Users\BME\Documents\MATLAB\IP_2024 - Copy\DIP3E_Original_Images_CH03\Fig0327(a)(tungsten_original).tif");
+imshow(I);
+[m,n]=size(I);
+%min intensity of object to be highlighted
+A=150;
+%max intensity of object to be highlighted
+B=230;
+I1=0;
+I2=230;
+for x=1:m
+    for y=1:n
+        r=I(x,y);
+        if r>A && r<B
+            s(x,y)=I2;
+        else
+            s(x,y)=I1;
+        end
+    end
+end
+figure,imshow(s)
+
