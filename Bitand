@@ -1,0 +1,8 @@
+i=imread('C:\Users\BME\Documents\MATLAB\IP_2024 - Copy\DIP3E_Original_Images_CH06\Fig0608(RGB-full-color-cube).tif')
+subplot(3,3,1),imshow(i)
+p=0;
+for j=0:7
+    c=bitand(i,2^j);
+    subplot(3,3,p+2),imshow(c)
+    p=p+1;
+end
